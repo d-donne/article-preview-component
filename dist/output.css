@@ -542,6 +542,10 @@ video {
   visibility: collapse;
 }
 
+.static {
+  position: static;
+}
+
 .absolute {
   position: absolute;
 }
@@ -556,14 +560,6 @@ video {
 
 .m-0 {
   margin: 0px;
-}
-
-.m-7 {
-  margin: 1.75rem;
-}
-
-.m-10 {
-  margin: 2.5rem;
 }
 
 .mx-6 {
@@ -584,15 +580,6 @@ video {
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
-}
-
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
-.ml-auto {
-  margin-left: auto;
 }
 
 .mt-\[0\.75rem\] {
@@ -631,10 +618,6 @@ video {
   height: 2.5rem;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .h-\[12\.5rem\] {
   height: 12.5rem;
 }
@@ -647,20 +630,17 @@ video {
   height: 100vh;
 }
 
-.h-auto {
-  height: auto;
-}
-
-.w-8 {
-  width: 2rem;
-}
-
 .w-full {
   width: 100%;
 }
 
 .w-auto {
   width: auto;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .border-collapse {
@@ -707,12 +687,12 @@ video {
   gap: 0px;
 }
 
-.overflow-hidden {
-  overflow: hidden;
+.overflow-visible {
+  overflow: visible;
 }
 
-.rounded-\[100\%\] {
-  border-radius: 100%;
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .rounded-full {
@@ -723,8 +703,22 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-s-md {
+  border-start-start-radius: 0.375rem;
+  border-end-start-radius: 0.375rem;
+}
+
 .border {
   border-width: 1px;
+}
+
+.bg-desaturated-dark-blue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(214 17% 51% / var(--tw-bg-opacity));
 }
 
 .bg-light-grayish-blue {
@@ -742,47 +736,14 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-grayish-blue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(212 23% 69% / var(--tw-bg-opacity));
-}
-
-.bg-desaturated-dark-blue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(214 17% 51% / var(--tw-bg-opacity));
-}
-
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.object-none {
-  -o-object-fit: none;
-     object-fit: none;
-}
-
 .object-\[0_-1\.1rem\] {
   -o-object-position: 0 -1.1rem;
      object-position: 0 -1.1rem;
-}
-
-.object-center {
-  -o-object-position: center;
-     object-position: center;
-}
-
-.p-7 {
-  padding: 1.75rem;
-}
-
-.p-10 {
-  padding: 2.5rem;
 }
 
 .px-\[1\.875rem\] {
@@ -795,26 +756,18 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
-.pt-9 {
-  padding-top: 2.25rem;
 }
 
 .pt-8 {
@@ -841,6 +794,10 @@ video {
   font-weight: 700;
 }
 
+.leading-7 {
+  line-height: 1.75rem;
+}
+
 .tracking-\[0\.3rem\] {
   letter-spacing: 0.3rem;
 }
@@ -864,6 +821,10 @@ video {
   text-decoration-line: underline;
 }
 
+.opacity-100 {
+  opacity: 1;
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -878,6 +839,13 @@ video {
   outline-style: solid;
 }
 
+.share-btn {
+  margin-left: auto;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 9999px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -887,21 +855,35 @@ video {
   color: hsl(228, 45%, 44%);
 }
 
-svg path {
-  fill: rgb(30, 23, 159);
+.rest::after {
+  content: '';
+  background: #000;
+  width: 100%;
+  height: 2rem;
+  display: block;
+  position: absolute;
+  bottom: -2rem;
 }
 
 @media (min-width: 768px) {
+  .md\:static {
+    position: static;
+  }
+
+  .md\:relative {
+    position: relative;
+  }
+
+  .md\:bottom-\[6rem\] {
+    bottom: 6rem;
+  }
+
+  .md\:right-\[-3\.8rem\] {
+    right: -3.8rem;
+  }
+
   .md\:m-0 {
     margin: 0px;
-  }
-
-  .md\:m-7 {
-    margin: 1.75rem;
-  }
-
-  .md\:m-10 {
-    margin: 2.5rem;
   }
 
   .md\:mx-0 {
@@ -909,9 +891,16 @@ svg path {
     margin-right: 0px;
   }
 
-  .md\:mx-10 {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:h-\[280px\] {
+    height: 280px;
+  }
+
+  .md\:h-\[3\.5rem\] {
+    height: 3.5rem;
   }
 
   .md\:h-full {
@@ -922,48 +911,17 @@ svg path {
     height: 100vh;
   }
 
-  .md\:h-\[280px\] {
-    height: 280px;
-  }
-
-  .md\:h-auto {
-    height: auto;
-  }
-
-  .md\:w-\[\] {
-    width: ;
-  }
-
-  .md\:w-\[280px\] {
-    width: 280px;
+  .md\:w-\[71\%\] {
+    width: 71%;
   }
 
   .md\:w-auto {
     width: auto;
   }
 
-  .md\:w-full {
-    width: 100%;
-  }
-
-  .md\:w-\[70\%\] {
-    width: 70%;
-  }
-
-  .md\:w-\[75\%\] {
-    width: 75%;
-  }
-
-  .md\:w-\[68\%\] {
-    width: 68%;
-  }
-
-  .md\:w-\[69\%\] {
-    width: 69%;
-  }
-
-  .md\:w-\[71\%\] {
-    width: 71%;
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .md\:max-w-\[732px\] {
@@ -982,54 +940,17 @@ svg path {
     gap: 0px;
   }
 
-  .md\:gap-\[1rem\] {
-    gap: 1rem;
+  .md\:overflow-visible {
+    overflow: visible;
   }
 
-  .md\:gap-\[0\.9rem\] {
-    gap: 0.9rem;
+  .md\:rounded-xl {
+    border-radius: 0.75rem;
   }
 
-  .md\:gap-\[0\.8rem\] {
-    gap: 0.8rem;
-  }
-
-  .md\:gap-\[0\.7rem\] {
-    gap: 0.7rem;
-  }
-
-  .md\:gap-\[0\.5rem\] {
-    gap: 0.5rem;
-  }
-
-  .md\:object-contain {
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-
-  .md\:object-cover {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .md\:object-none {
-    -o-object-fit: none;
-       object-fit: none;
-  }
-
-  .md\:object-center {
-    -o-object-position: center;
-       object-position: center;
-  }
-
-  .md\:object-\[\] {
-    -o-object-position: ;
-       object-position: ;
-  }
-
-  .md\:object-\[0\] {
-    -o-object-position: 0;
-       object-position: 0;
+  .md\:rounded-s-md {
+    border-start-start-radius: 0.375rem;
+    border-end-start-radius: 0.375rem;
   }
 
   .md\:object-\[0_0\] {
@@ -1037,12 +958,9 @@ svg path {
        object-position: 0 0;
   }
 
-  .md\:p-7 {
-    padding: 1.75rem;
-  }
-
-  .md\:p-10 {
-    padding: 2.5rem;
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md\:px-10 {
@@ -1050,68 +968,15 @@ svg path {
     padding-right: 2.5rem;
   }
 
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .md\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
-  .md\:pt-9 {
-    padding-top: 2.25rem;
-  }
-
   .md\:pt-8 {
     padding-top: 2rem;
-  }
-
-  .md\:text-\[2rem\] {
-    font-size: 2rem;
-  }
-
-  .md\:text-\[1\.5rem\] {
-    font-size: 1.5rem;
-  }
-
-  .md\:text-\[1\.7rem\] {
-    font-size: 1.7rem;
-  }
-
-  .md\:text-\[1\.6rem\] {
-    font-size: 1.6rem;
-  }
-
-  .md\:text-\[1\.4rem\] {
-    font-size: 1.4rem;
-  }
-
-  .md\:text-\[1\.2rem\] {
-    font-size: 1.2rem;
-  }
-
-  .md\:text-\[1\.3rem\] {
-    font-size: 1.3rem;
-  }
-
-  .md\:text-\[1\.25rem\] {
-    font-size: 1.25rem;
   }
 
   .md\:text-\[1\.24rem\] {
     font-size: 1.24rem;
   }
 
-  .md\:text-\[1\.22rem\] {
-    font-size: 1.22rem;
-  }
-
-  .md\:text-\[1\.23rem\] {
-    font-size: 1.23rem;
-  }
-
-  .md\:text-\[1\.214rem\] {
-    font-size: 1.214rem;
+  .md\:leading-7 {
+    line-height: 1.75rem;
   }
 }

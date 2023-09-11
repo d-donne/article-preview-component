@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./*html"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: "420px",
+      },
+    },
     colors: {
       "very-dark-grayish-blue": "hsl(217, 19%, 35%)",
       "desaturated-dark-blue": "hsl(214, 17%, 51%)",

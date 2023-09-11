@@ -2,11 +2,15 @@
 @tailwind utilities;
 @tailwind components;
 
+@layer base {
+    a {
+        @apply cursor-pointer
+    }
 
-
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  
+    #social img:not(last-child):hover {
+            @apply bg-grayish-blue/70
+    }
+}
     @layer components {
         .share-btn {
             @apply rounded-full h-8 w-8 ml-auto
@@ -24,3 +28,5 @@
         
         
     }
+
+    
